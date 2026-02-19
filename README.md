@@ -190,4 +190,4 @@ MIT — see [LICENSE](LICENSE)
 
 ---
 
-*Created by [Raajkumar S.](https://linkedin.com/in/AskRaaj) · Founder of [QwickApps](https://qwickapps.com) · Former Senior SWE at Google · AI/ML solutions & cybersecurity training for U.S. government teams.*
+*Created by [Raajkumar Subramaniam.](https://linkedin.com/in/raajkumar) · Founder of [QwickApps](https://qwickapps.com) · Former Senior SWE at Google · AI/ML solutions & cybersecurity training for U.S. government teams.*
