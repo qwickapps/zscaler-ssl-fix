@@ -10,19 +10,19 @@ If you work behind Zscaler (or any corporate SSL-inspecting proxy) and you've hi
 
 ### macOS
 ```bash
-curl -fsSL https://raw.githubusercontent.com/AskRaaj/zscaler-ssl-fix/main/scripts/fix-zscaler-ssl-macos.sh -o fix.sh
+curl -fsSL https://raw.githubusercontent.com/qwickapps/zscaler-ssl-fix/refs/heads/main/scripts/fix-zscaler-ssl-macos.sh -o fix.sh
 chmod +x fix.sh && ./fix.sh
 ```
 
 ### Linux (Ubuntu/Debian, RHEL/Fedora, Arch)
 ```bash
-curl -fsSL https://raw.githubusercontent.com/AskRaaj/zscaler-ssl-fix/main/scripts/fix-zscaler-ssl-linux.sh -o fix.sh
+curl -fsSL https://raw.githubusercontent.com/qwickapps/zscaler-ssl-fix/refs/heads/main/fix-zscaler-ssl-linux.sh -o fix.sh
 chmod +x fix.sh && ./fix.sh
 ```
 
 ### Windows (PowerShell)
 ```powershell
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/AskRaaj/zscaler-ssl-fix/main/scripts/fix-zscaler-ssl-windows.ps1" -OutFile fix.ps1
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/qwickapps/zscaler-ssl-fix/refs/heads/main/scripts/fix-zscaler-ssl-windows.ps1" -OutFile fix.ps1
 powershell -ExecutionPolicy Bypass -File fix.ps1
 ```
 
