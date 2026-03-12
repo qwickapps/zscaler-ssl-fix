@@ -10,7 +10,7 @@ If you work behind Zscaler (or any corporate SSL-inspecting proxy) and you've hi
 
 ### macOS
 ```bash
-curl -fsSL https://raw.githubusercontent.com/qwickapps/zscaler-ssl-fix/refs/heads/main/scripts/fix-zscaler-ssl-macos.sh -o fix.sh
+curl -fsSL https://raw.githubusercontent.com/qwickapps/zscaler-ssl-fix/refs/heads/main/fix-zscaler-ssl-macos.sh -o fix.sh
 chmod +x fix.sh && ./fix.sh
 ```
 
@@ -22,7 +22,7 @@ chmod +x fix.sh && ./fix.sh
 
 ### Windows (PowerShell)
 ```powershell
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/qwickapps/zscaler-ssl-fix/refs/heads/main/scripts/fix-zscaler-ssl-windows.ps1" -OutFile fix.ps1
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/qwickapps/zscaler-ssl-fix/refs/heads/main/fix-zscaler-ssl-windows.ps1" -OutFile fix.ps1
 powershell -ExecutionPolicy Bypass -File fix.ps1
 ```
 
@@ -167,10 +167,9 @@ Copy the cert into WSL and run the Linux script. The Windows cert store is not a
 zscaler-ssl-fix/
 ├── README.md
 ├── LICENSE
-└── scripts/
-    ├── fix-zscaler-ssl-macos.sh       # macOS (bash)
-    ├── fix-zscaler-ssl-linux.sh        # Linux (bash)
-    └── fix-zscaler-ssl-windows.ps1     # Windows (PowerShell)
+├── fix-zscaler-ssl-macos.sh       # macOS (bash)
+├── fix-zscaler-ssl-linux.sh        # Linux (bash)
+└── fix-zscaler-ssl-windows.ps1     # Windows (PowerShell)
 ```
 
 ---

@@ -1,4 +1,4 @@
-# ============================================================================
+﻿# ============================================================================
 # fix-zscaler-ssl-windows.ps1 v2.0
 #
 # Fixes "self signed certificate in certificate chain" errors caused by
@@ -86,7 +86,7 @@ if (-not $ZscalerFound) {
     try {
         $output = echo "" | openssl s_client -connect api.anthropic.com:443 -showcerts 2>&1
         # Extract last cert in chain (the root)
-        $certs = [regex]::Matches($output, "-----BEGIN CERTIFICATE-----([\s\S]*?)-----END CERTIFICATE-----")
+        $certs = [regex]::Matches($output, '-----BEGIN CERTIFICATE-----[\s\S]*?-----END CERTIFICATE-----')
         if ($certs.Count -gt 0) {
             $lastCert = $certs[$certs.Count - 1].Value
             $lastCert | Out-File -FilePath $ZscalerCert -Encoding ASCII -NoNewline
@@ -310,7 +310,8 @@ if (Get-Command curl.exe -ErrorAction SilentlyContinue) {
 # Test: Node.js
 if (Get-Command node -ErrorAction SilentlyContinue) {
     $env:NODE_EXTRA_CA_CERTS = $CombinedBundle
-    $nr = node -e "fetch('https://api.anthropic.com').then(r=>console.log('HTTP '+r.status)).catch(e=>console.log('FAIL:'+e.code))" 2>&1
+    $nodeScript = "fetch('https://api.anthropic.com').then(function(r){console.log('HTTP '+r.status)}).catch(function(e){console.log('FAIL:'+e.code)})"
+    $nr = node -e $nodeScript 2>&1
     if ($nr -match "HTTP") {
         Write-Ok "Node.js ($nr) ✓"
         $Pass++
